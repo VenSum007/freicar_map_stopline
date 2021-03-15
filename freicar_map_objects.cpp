@@ -501,6 +501,13 @@ float Roadsign::GetRotation() const{
 void Roadsign::SetPosition(float x, float y, float z) {
 	position_.SetCoords(x, y, z);
 }
+
+// ____________________________________________________________________________
+// getter for LaneObject::StopLine
+Point3D Stopline::GetPosition() const{
+    return position;
+}
+
 // ____________________________________________________________________________
 // Junction class
 /* adds lane to the lane storage of this junction. assumes each junction lane only has a single

@@ -279,7 +279,8 @@ class Stopline : public LaneObject {
 	Stopline(Uuid id_in, Uuid lg_id_in, std::vector<Uuid> lane_ids_in, float offset_in)
 		: LaneObject(id_in, LaneObjectType::LO_STOPLINE, lg_id_in, lane_ids_in, offset_in) {}
 	~Stopline();
-	Point3D GetPosition() {return position;}
+	// Point3D GetPosition() {return position;}
+	Point3D GetPosition() const;
 private:
 	// set in Lane::SetStopline, used for visulization in Map
 	Point3D position, v_forward, v_right;
